@@ -173,15 +173,28 @@ section{
     padding: 10px 0;
  }
 
- tr th:nth-child(2)
+
+#message{
+   color:red;
+}
+
+.selected{
+   background-color: red;
+   color: #fff;
+}
+ .selection{
+   padding:100px;
+ }
+
+ tr th:nth-child(3)
  {
     width: 300px;
  }
- tr th:nth-child(3){
+ tr th:nth-child(4){
     width: 100px;
  }
 
- tr th:nth-child(4)
+ tr th:nth-child(5)
  {
     width: 70px;   
  }
@@ -249,4 +262,14 @@ th{
  input[type=radio]
  {
     margin-top: 5px;
+ }
+
+
+
+ .deletetablebutton{
+   border:none;
+   cursor: pointer;
+   color: red;
+   align-self: center;
+  
  }

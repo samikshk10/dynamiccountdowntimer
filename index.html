@@ -50,9 +50,13 @@
 
 <div id="add-events" class="event-container">
     <button class="close-btn close-add">X</button>
+    
            EventTitle:<input type="text" aria-label="event-title" id="event-title" required><br>
 Date: <input type="date" aria-label="date" id="event-date" required><br>
-<button class="add" id="addevent">ADD</button>
+<button  class="add" id="addevent">ADD</button><br>
+<p id="message"></p>
+
+
 
 </div>
 
@@ -61,18 +65,23 @@ Date: <input type="date" aria-label="date" id="event-date" required><br>
     <div id="Events">
         <div class="event-container">
             <button class="close-btn close" title="Close">X</button>
+           
             <button class="add-btn addevents close-btn" title="Add Events">+</button>
             <h2>Manage Events</h2>
 
 
             <div class="table-data" >
             <table id="table">
-                <tr>
+                <tr id="first-tr">
+                    <th hidden>ID</th>
                     <th>Select</th>
                     <th>Event</th>
                     <th>Date</th>
                     <th>Action</th>
                 </tr>
+                <tbody id="table-body">
+
+                </tbody>
             </table>
         </div>
 
@@ -85,8 +94,8 @@ Date: <input type="date" aria-label="date" id="event-date" required><br>
         <div id="ManageEvents">
             <button id="eventbtn">Manage Events</button>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="script.js"></script>
-</body>
+<script src="script.js"></script>
 </html>
