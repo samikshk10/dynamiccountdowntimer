@@ -16,6 +16,18 @@
 
    const addevent=document.getElementById('addevent');
 //    localStorage.clear();
+
+
+const date1 = new Date();
+let day1 = date1.getDate();
+let month1 = date1.getMonth() + 1;
+let year1 = date1.getFullYear();
+
+let todaydate = `${year1}-${month1}-${day1}`;
+
+
+document.getElementById('event-date').setAttribute('min',todaydate);
+
 let date;
 let datesdata;
 let titledata;
@@ -62,9 +74,9 @@ date="1 Jan 2023";
                         // console.log(tbl.rows[r].cells[0].innerHTML);
                         // console.log(localStorage.getItem('selectedbtn'));
                             tbl.rows[r].classList.add('selected');
-                    }
                 }
         }
+    }
 
         function ShowData() {
            
@@ -255,6 +267,12 @@ ShowData();
 
                 let eventdetails=new Array();
             let randomid = Math.floor(Math.random() * 999);
+
+            
+        
+
+
+
             eventdetails=JSON.parse(localStorage.getItem('users'))?JSON.parse(localStorage.getItem('users')):[];
             eventdetails.push({
                 "id": randomid,
