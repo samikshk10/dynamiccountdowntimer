@@ -21,7 +21,6 @@ let month1 = date1.getMonth() + 1;
 let year1 = date1.getFullYear();
 
 let todaydate = `${year1}-${month1}-${day1}`;
-
 document.getElementById('event-date').setAttribute('min', todaydate);
 
 let date;
@@ -88,16 +87,11 @@ function ShowData() {
     var tbl = document.getElementById('table-body');
 
     for (let i = 0; i < arr1.length; i++) {
-
-
         let idtable = Math.floor(Math.random() * 507);
-
         let tablerow = document.createElement('tr');
         tablerow.setAttribute('id', idtable);
         tablerow.setAttribute('class', 'asdf');
         table.appendChild(tablerow);
-
-
 
         let a0 = document.createElement('td');
         let a = document.createElement('td');
@@ -258,12 +252,6 @@ eventbtn.addEventListener('click', (e) => {
 
         let eventdetails = new Array();
         let randomid = Math.floor(Math.random() * 999);
-
-
-
-
-
-
         eventdetails = JSON.parse(localStorage.getItem('users')) ? JSON.parse(localStorage.getItem('users')) : [];
         eventdetails.push({
             "id": randomid,
@@ -279,16 +267,6 @@ eventbtn.addEventListener('click', (e) => {
 
 
     };
-
-
-    // checked();
-
-
-
-
-
-
-    // var tablesss= document.getElementById('table');
     eventbtn.style.pointerEvents = "none";
 
 
