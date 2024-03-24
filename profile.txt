@@ -1,0 +1,36 @@
+function ginit{git init}
+# @args you can pass multi arguments for example
+# ga fileName1 fileName2 
+function gaa{git add .}
+function gcm { git commit -m @args }
+function gac{git add .;git commit -m @args}
+function gpom{git push origin master}
+function gpuom{git pull origin master}
+function gpu { git pull @args }
+function gl{git log}
+function gpo {git push origin @args}
+function gp { git pull origin @args}
+function gco {git checkout @args}
+function gcob {git checkout -b @args}
+function gbrm { git branch -D @args}
+function gs {git switch -}
+function glo{git log --oneline}
+function glog{git log --oneline --graph}
+function gch{git checkout @args}
+function grta {git restore .}
+function gst {git stash}
+function grt {git restore @args}
+function gstls {git stash list}
+function gsta {git stash apply}
+function gstp {git stash pop}
+function ys {yarn start}
+function gcl {git clone @args}
+function gf {git fetch}
+function gfa {git fetch --all}
+
+# @args is optional to add argument
+function gb{git branch @args}
+function gs{git status}
+function gd{git diff}
+
+oh-my-posh init pwsh --config "C:\Program Files (x86)\oh-my-posh\themes\cobalt2.omp.json" | Invoke-Expression
